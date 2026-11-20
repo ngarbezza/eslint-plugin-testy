@@ -73,9 +73,16 @@ npm version <patch|minor|major>   # actualiza package.json y crea el tag
 git push --follow-tags
 ```
 
-Al crear un release en GitHub, el workflow `publish.yml` publica el paquete en npm con provenance
-(requiere el secret `NPM_TOKEN`). También se puede publicar a mano con `npm publish`;
-`prepublishOnly` corre lint y tests antes.
+Al crear un release en GitHub, el workflow `publish.yml` deja el paquete en *staging* en npm con
+provenance (`npm stage publish`, requiere el secret `NPM_TOKEN`). La versión no queda pública hasta
+que un maintainer la aprueba con 2FA:
+
+```bash
+npm stage list eslint-plugin-testy
+npm stage approve <stage-id>
+```
+
+También se puede publicar a mano con `npm publish`; `prepublishOnly` corre lint y tests antes.
 
 ## Licencia
 

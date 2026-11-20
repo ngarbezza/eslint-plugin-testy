@@ -21,6 +21,8 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm test
-      - run: npm publish
+      # Staged publishing: this does not publish the package yet. It leaves the version staged in the
+      # registry, and a maintainer approves it with 2FA (`npm stage approve <stage-id>`).
+      - run: npm stage publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
