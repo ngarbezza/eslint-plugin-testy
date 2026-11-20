@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-testy",
+  "name": "@ngarbezza/eslint-plugin-testy",
   "version": "0.1.0",
   "description": "ESLint plugin with rules for tests written with Testy (@pmoo/testy)",
   "keywords": [

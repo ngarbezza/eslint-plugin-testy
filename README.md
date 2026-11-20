@@ -1,11 +1,11 @@
-# eslint-plugin-testy
+# @ngarbezza/eslint-plugin-testy
 
 Reglas de ESLint para tests escritos con [Testy](https://github.com/ngarbezza/testy) (`@pmoo/testy`).
 
 ## Instalación
 
 ```bash
-npm install --save-dev eslint eslint-plugin-testy
+npm install --save-dev eslint @ngarbezza/eslint-plugin-testy
 ```
 
 Requiere ESLint 9 o superior (flat config) y Node.js `^22.13.0 || >=24`.
@@ -15,7 +15,7 @@ Requiere ESLint 9 o superior (flat config) y Node.js `^22.13.0 || >=24`.
 En tu `eslint.config.js`:
 
 ```js
-import testy from 'eslint-plugin-testy';
+import testy from '@ngarbezza/eslint-plugin-testy';
 
 export default [
   // Configuración recomendada, para aplicar a tus archivos de test
@@ -29,7 +29,7 @@ export default [
 O activando las reglas de a una:
 
 ```js
-import testy from 'eslint-plugin-testy';
+import testy from '@ngarbezza/eslint-plugin-testy';
 
 export default [
   {
@@ -78,7 +78,7 @@ provenance (`npm stage publish`, requiere el secret `NPM_TOKEN`). La versión no
 que un maintainer la aprueba con 2FA:
 
 ```bash
-npm stage list eslint-plugin-testy
+npm stage list @ngarbezza/eslint-plugin-testy
 npm stage approve <stage-id>
 ```
 
